@@ -1,0 +1,338 @@
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+.topbar {
+  background: #111;
+  color: #fff;
+  font-size: 0.98rem;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topbar-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+.topbar-left a {
+  color: #ffd700;
+  text-decoration: none;
+  margin-right: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.topbar-left a:last-child {
+  color: #fff;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.topbar-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.topbar-right .search {
+  margin-left: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.header {
+  background: #111;
+  padding: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+.site-title {
+  font-size: 2.8rem;
+  font-family: 'Georgia', serif;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.mainnav {
+  background: #e5e7eb;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d1d5db;
+}
+.mainnav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+.mainnav-link {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  margin-right: 32px;
+  padding: 0 2px;
+  transition: color 0.2s;
+}
+.mainnav-link:last-child {
+  margin-right: 0;
+}
+.mainnav-link:hover {
+  color: #2563eb;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px 0 16px;
+}
+.hero-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.hero-main {
+  flex: 2;
+  position: relative;
+}
+.hero-main img {
+  width: 100%;
+  height: 357px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.hero-main .hero-title {
+  position: absolute;
+  left: 32px;
+  bottom: 100px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  max-width: 80%;
+  line-height: 1.2;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
+  padding: 20px;
+  border-radius: 8px;
+  margin-right: 32px;
+}
+.hero-main .hero-desc {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  color: #fff;
+  font-size: 1.1rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  max-width: 80%;
+  line-height: 1.4;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
+  padding: 16px;
+  border-radius: 8px;
+  margin-right: 32px;
+}
+.hero-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.hero-side-card {
+  position: relative;
+}
+.hero-side-card img {
+  width: 100%;
+  height: 105px;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: brightness(0.85);
+  display: block;
+}
+.hero-side-card .side-title {
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.news-list {
+  margin-top: 24px;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.06);
+  padding: 28px 28px 20px 28px;
+  margin-bottom: 28px;
+  border: 1px solid #e5e7eb;
+}
+.card h2 {
+  color: #1a2233;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.card .date {
+  color: #64748b;
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+}
+.card p {
+  color: #374151;
+  font-size: 1.08rem;
+}
+footer {
+  background: #111;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 24px 0 16px 0;
+  margin-top: 48px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg,#2563eb 0%,#1fa2ff 100%);
+  color: #fff;
+  padding: 18px 48px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  margin-top: 16px;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  box-shadow: 0 4px 24px rgba(30,41,59,0.18), 0 1.5px 6px rgba(31,162,255,0.10);
+  text-align: center;
+}
+.btn-gradient {
+  background: linear-gradient(90deg,#2563eb 0%,#1fa2ff 100%);
+}
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(31,162,255,0.4); }
+  70% { box-shadow: 0 0 0 16px rgba(31,162,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(31,162,255,0); }
+} 
+
+/* 图片占位符样式 */
+img {
+  position: relative;
+}
+
+img::before {
+  content: "图片加载中...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+              linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+              linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  border-radius: inherit;
+}
+
+/* 当图片加载失败时的样式 */
+img[src*="images/"]:not([src*="panda-logo"]) {
+  background: linear-gradient(45deg, #f8f9fa 25%, transparent 25%), 
+              linear-gradient(-45deg, #f8f9fa 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #f8f9fa 75%), 
+              linear-gradient(-45deg, transparent 75%, #f8f9fa 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  border: 2px solid #e9ecef;
+  position: relative;
+}
+
+img[src*="images/"]:not([src*="panda-logo"])::after {
+  content: "图片占位符";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #6c757d;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 促销卡片中的图片占位符 */
+.promo-img[src*="images/"]:not([src*="panda-logo"]) {
+  background: linear-gradient(45deg, #f8f9fa 25%, transparent 25%), 
+              linear-gradient(-45deg, #f8f9fa 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #f8f9fa 75%), 
+              linear-gradient(-45deg, transparent 75%, #f8f9fa 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  border: 2px solid #e9ecef;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-img[src*="images/"]:not([src*="panda-logo"])::after {
+  content: "产品图片";
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* 图标占位符 */
+.promo-badges img[src*="images/"]:not([src*="panda-logo"]) {
+  background: #e9ecef;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-badges img[src*="images/"]:not([src*="panda-logo"])::after {
+  content: "图标";
+  font-size: 10px;
+  color: #6c757d;
+  font-weight: 500;
+} 

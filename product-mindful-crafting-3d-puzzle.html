@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindful Crafting: How Woodbests 3D Puzzles Turn Stress into Serenity - Pandamobo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #f5f6fa; }
+    .news-topbar {
+      background: #111;
+      color: #fff;
+      padding: 0;
+      border-bottom: 1.5px solid #e5e7eb;
+    }
+    .news-topbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 54px;
+      padding: 0 32px;
+    }
+    .news-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .news-logo img {
+      height: 32px;
+      width: 32px;
+      border-radius: 6px;
+      background: #fff;
+      object-fit: contain;
+    }
+    .news-logo span {
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .news-nav {
+      display: flex;
+      gap: 28px;
+    }
+    .news-nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 1.08rem;
+      font-weight: 500;
+      transition: color 0.18s;
+    }
+    .news-nav a:hover { color: #fff; }
+    .main-wrap {
+      display: flex;
+      flex-direction: row;
+      max-width: 1100px;
+      margin: 32px auto 0 auto;
+      gap: 36px;
+      min-height: 600px;
+    }
+    .main-content {
+      flex: 1 1 0;
+      max-width: 620px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+      padding: 36px 32px 32px 32px;
+      margin-bottom: 32px;
+    }
+    .news-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .news-author-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #e5e7eb;
+    }
+    .news-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .news-author {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .news-date {
+      font-size: 0.97rem;
+      color: #64748b;
+    }
+    .review-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      margin-top: 0;
+      line-height: 1.2;
+    }
+    .review-section img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      margin: 18px auto 18px auto;
+      display: block;
+      box-shadow: 0 2px 12px rgba(30,41,59,0.10);
+    }
+    .review-section {
+      margin-bottom: 28px;
+    }
+    .review-section p {
+      font-size: 1.08rem;
+      color: #222;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+    .review-section ul {
+      margin: 0 0 16px 24px;
+      color: #222;
+      font-size: 1.08rem;
+    }
+    .review-section strong {
+      color: #1a2233;
+    }
+    .review-section em {
+      color: #2563eb;
+    }
+    /* 右侧悬浮促销卡片 */
+    .promo-card-fixed {
+      position: fixed;
+      top: 90px;
+      right: 48px;
+      z-index: 1000;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(30,41,59,0.13);
+      max-width: 320px;
+      width: 300px;
+      padding: 0 0 32px 0;
+      border: 1.5px solid #e5e7eb;
+      text-align: center;
+      transition: box-shadow 0.18s;
+    }
+    .promo-header {
+      background: #222;
+      color: #fff;
+      border-radius: 24px 24px 0 0;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 16px 0 12px 0;
+      letter-spacing: 0.5px;
+    }
+    .promo-img {
+      width: 80%;
+      margin: 16px auto 8px auto;
+      display: block;
+      border-radius: 12px;
+      background: #f7fafc;
+    }
+    .promo-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .promo-badges img {
+      height: 40px;
+      width: auto;
+    }
+    .promo-link {
+      color: #0074d9;
+      font-size: 1.05rem;
+      text-decoration: underline;
+      font-weight: 600;
+      margin: 10px 0 18px 0;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .green-btn {
+      display: block;
+      width: 90%;
+      margin: 22px auto 0 auto;
+      background: linear-gradient(90deg,#1ed760 0%,#00c853 100%);
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 0;
+      box-shadow: 0 4px 16px rgba(30,41,59,0.13);
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.12s;
+      text-align: center;
+      text-decoration: none;
+    }
+    .green-btn:hover {
+      background: linear-gradient(90deg,#00c853 0%,#1ed760 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .green-btn .arrow {
+      font-size: 1.2em;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    @media (max-width: 1100px) {
+      .main-wrap { gap: 0; }
+      .promo-card-fixed { display: none; }
+    }
+    @media (max-width: 700px) {
+      .main-content { padding: 18px 6vw 18px 6vw; }
+      .news-topbar-inner { padding: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 顶部专业新闻导航 -->
+  <div class="news-topbar">
+    <div class="news-topbar-inner">
+      <div class="news-logo">
+        <img src="images/panda-logo.png" alt="Panda Logo">
+        <span>Pandamobo Trending</span>
+      </div>
+      <nav class="news-nav">
+        <a href="index.html">Home</a>
+        <a href="#">Reviews</a>
+        <a href="#">Tech</a>
+        <a href="#">Health</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="main-wrap">
+    <main class="main-content">
+      <div class="news-header">
+        <img class="news-author-avatar" src="https://randomuser.me/api/portraits/women/41.jpg" alt="Sophie Martinez">
+        <div class="news-meta">
+          <span class="news-author">By Sophie Martinez</span>
+          <span class="news-date">December 13th, 2025</span>
+        </div>
+      </div>
+      <h1 class="review-title">Mindful Crafting: How Woodbests 3D Puzzles Turn Stress into Serenity</h1>
+      <div class="review-section">
+        <p>Life moves fast. ⏳ Our calendars are full, our phones never stop buzzing, and even our downtime often feels rushed. It's no wonder so many of us feel like we're stuck in overdrive — minds racing, shoulders tense, always thinking about the next thing on the list.</p>
+        <p>But something is quietly shifting. More and more people are rediscovering the joy of slowing down — creating with their hands, unplugging from screens, and giving their minds space to breathe. 🌿 DIY hobbies aren't just fun anymore; they've become a form of therapy, a gentle way to escape the noise.</p>
+        <p>That's exactly what the <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Woodbests 3D Wooden Puzzle Clock</a> offers: a calm, focused, deeply satisfying way to unwind. 🧩</p>
+        <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/mindful-crafting-1.png" alt="3D Wooden Puzzle Clock" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">🌙 A Fully Immersive Escape</h2>
+        <p>Open the box, and the world fades away. Inside are dozens of precisely cut wooden pieces, smooth to the touch and printed with rich, detailed patterns. Each piece clicks into place with a satisfying snap, drawing you into the slow rhythm of building.</p>
+        <p>As your hands stay busy and your mind narrows in on each tiny step, stress quietly slips away. 💭 It's just you, the pieces, and the quiet magic of watching something beautiful come to life.</p>
+        <p>Unlike ordinary puzzles that end as flat pictures, this clock takes shape in three dimensions — a sculptural centerpiece that actually ticks. Every part you add brings it closer to becoming a real, working timepiece.</p>
+        <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/mindful-crafting-2.png" alt="Immersive Building Experience" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">🎯 Focus, Patience, and Skill</h2>
+        <p>In a world full of distractions, there's something powerful about giving your full attention to one thing.</p>
+        <p>Building the <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Woodbests clock</a> challenges your focus in the best way — assembling gears, hands, and panels into a precise mechanical structure. ⏰ It's hands-on, tactile, and deeply engaging.</p>
+        <p>It's not just crafting — it's training your mind to slow down, concentrate, and stick with something until the final gear is in place. Every click is proof that patience still has a place in our fast-paced lives. 💛</p>
+        <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/mindful-crafting-3.png" alt="Focus and Patience Building" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">🌼 Your Daily Moment of Calm</h2>
+        <p>The best part? You don't need hours. Just 15–20 minutes each evening can become your peaceful "unplugged" ritual.</p>
+        <p>One <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Woodbests customer</a> shared how she now spends a quiet moment at her kitchen table every night, piecing her clock together instead of scrolling her phone:</p>
+        <p><em>"It's the only time of day when my brain finally stops buzzing."</em> 📵</p>
+        <p>Those small, screen-free moments of calm start adding up — until you find yourself actually looking forward to slowing down. 🌙</p>
+        <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/mindful-crafting-6.png" alt="Daily Moment of Calm" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">🌟 More Ways to Slow Down</h2>
+        <p>The <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Wooden Puzzle Clock</a> isn't the only path to this peaceful flow.</p>
+        <p><a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Woodbests</a> also offers:</p>
+        <ul>
+          <li><strong>3D Puzzle Night Lights</strong> — craft glowing, cozy lights for your room 🌙</li>
+          <li><strong>3D Book Nook Kits</strong> — build tiny magical story worlds for your bookshelf 📚</li>
+          <li><strong>DIY Dollhouse & Miniature House Kits</strong> — create intricate, charming mini homes 🏡</li>
+          <li><strong>DIY STEM Kits</strong> — spark curiosity with hands-on, problem-solving fun ⚙️</li>
+        </ul>
+        <p>Each one invites you to pause, breathe, and create something beautiful at your own pace. ✨</p>
+        <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/mindful-crafting-5.png" alt="More Ways to Slow Down" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;">💛 A Gift of Time</h2>
+        <p>In a world that never stops, the most meaningful gift you can give is time — time to pause, to breathe, to reconnect with yourself.</p>
+        <p>The <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;"><strong>Woodbests 3D Wooden Puzzle Clock</strong></a> isn't just a puzzle. It's a sanctuary in a box — your peaceful corner of the world, waiting to be built.</p>
+        <p>So go ahead — give yourself permission to slow down.</p>
+        <p>✨ <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Shop now at Woodbests.com</a> and enjoy BUY 2 GET 10% OFF, BUY 3 GET 20% limited time offer.</p>
+        <p>Your calm is waiting… piece by piece. 🧩</p>
+        <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/mindful-crafting-8.png" alt="Shop Now at Woodbests.com" style="cursor:pointer;">
+        </a>
+      </div>
+    </main>
+    <!-- 右侧悬浮促销卡片 -->
+    <div class="promo-card-fixed">
+      <div class="promo-header">Mindful Crafting</div>
+      <img class="promo-img" src="images/mindful-crafting-1.png" alt="3D Wooden Puzzle Clock">
+      <div class="promo-badges">
+        <img src="images/guaranteed.png" alt="100% Guaranteed" title="100% Guaranteed">
+        <img src="images/no-mosquito.png" alt="Premium Wood" title="Premium Wood">
+      </div>
+      <a class="promo-link" href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">Turn Stress into Serenity — by Woodbests</a>
+      <a href="redirect.html?product=3d-puzzle&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" class="green-btn">SHOP NOW <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Memories Together: Advent Puzzles Calendar for All Generations - Pandamobo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #f5f6fa; }
+    .news-topbar {
+      background: #111;
+      color: #fff;
+      padding: 0;
+      border-bottom: 1.5px solid #e5e7eb;
+    }
+    .news-topbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 54px;
+      padding: 0 32px;
+    }
+    .news-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .news-logo img {
+      height: 32px;
+      width: 32px;
+      border-radius: 6px;
+      background: #fff;
+      object-fit: contain;
+    }
+    .news-logo span {
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .news-nav {
+      display: flex;
+      gap: 28px;
+    }
+    .news-nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 1.08rem;
+      font-weight: 500;
+      transition: color 0.18s;
+    }
+    .news-nav a:hover { color: #fff; }
+    .main-wrap {
+      display: flex;
+      flex-direction: row;
+      max-width: 1100px;
+      margin: 32px auto 0 auto;
+      gap: 36px;
+      min-height: 600px;
+    }
+    .main-content {
+      flex: 1 1 0;
+      max-width: 620px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+      padding: 36px 32px 32px 32px;
+      margin-bottom: 32px;
+    }
+    .news-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .news-author-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #e5e7eb;
+    }
+    .news-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .news-author {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .news-date {
+      font-size: 0.97rem;
+      color: #64748b;
+    }
+    .review-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      margin-top: 0;
+      line-height: 1.2;
+    }
+    .review-section img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      margin: 18px auto 18px auto;
+      display: block;
+      box-shadow: 0 2px 12px rgba(30,41,59,0.10);
+    }
+    .review-section {
+      margin-bottom: 28px;
+    }
+    .review-section p {
+      font-size: 1.08rem;
+      color: #222;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+    .review-section ul {
+      margin: 0 0 16px 24px;
+      color: #222;
+      font-size: 1.08rem;
+    }
+    .review-section strong {
+      color: #1a2233;
+    }
+    .review-section em {
+      color: #2563eb;
+    }
+    /* 右侧悬浮促销卡片 */
+    .promo-card-fixed {
+      position: fixed;
+      top: 90px;
+      right: 48px;
+      z-index: 1000;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(30,41,59,0.13);
+      max-width: 320px;
+      width: 300px;
+      padding: 0 0 32px 0;
+      border: 1.5px solid #e5e7eb;
+      text-align: center;
+      transition: box-shadow 0.18s;
+    }
+    .promo-header {
+      background: #222;
+      color: #fff;
+      border-radius: 24px 24px 0 0;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 16px 0 12px 0;
+      letter-spacing: 0.5px;
+    }
+    .promo-img {
+      width: 80%;
+      margin: 16px auto 8px auto;
+      display: block;
+      border-radius: 12px;
+      background: #f7fafc;
+    }
+    .promo-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .promo-badges img {
+      height: 40px;
+      width: auto;
+    }
+    .promo-link {
+      color: #0074d9;
+      font-size: 1.05rem;
+      text-decoration: underline;
+      font-weight: 600;
+      margin: 10px 0 18px 0;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .green-btn {
+      display: block;
+      width: 90%;
+      margin: 22px auto 0 auto;
+      background: linear-gradient(90deg,#1ed760 0%,#00c853 100%);
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 0;
+      box-shadow: 0 4px 16px rgba(30,41,59,0.13);
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.12s;
+      text-align: center;
+      text-decoration: none;
+    }
+    .green-btn:hover {
+      background: linear-gradient(90deg,#00c853 0%,#1ed760 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .green-btn .arrow {
+      font-size: 1.2em;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    @media (max-width: 1100px) {
+      .main-wrap { gap: 0; }
+      .promo-card-fixed { display: none; }
+    }
+    @media (max-width: 700px) {
+      .main-content { padding: 18px 6vw 18px 6vw; }
+      .news-topbar-inner { padding: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 顶部专业新闻导航 -->
+  <div class="news-topbar">
+    <div class="news-topbar-inner">
+      <div class="news-logo">
+        <img src="images/panda-logo.png" alt="Panda Logo">
+        <span>Pandamobo Trending</span>
+      </div>
+      <nav class="news-nav">
+        <a href="index.html">Home</a>
+        <a href="#">Reviews</a>
+        <a href="#">Tech</a>
+        <a href="#">Health</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="main-wrap">
+    <main class="main-content">
+      <div class="news-header">
+        <img class="news-author-avatar" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Emma Thompson">
+        <div class="news-meta">
+          <span class="news-author">By Emma Thompson</span>
+          <span class="news-date">December 5th, 2025</span>
+        </div>
+      </div>
+      <h1 class="review-title">Building Memories Together: Advent Puzzles Calendar for All Generations</h1>
+      <div class="review-section">
+        <p>Before we know it, Christmas is right around the corner. 🎄 And Christmas is so much more than just a date on the calendar — it's a season of togetherness, warmth, and love. ❤ It's the time to create precious memories with the people we cherish most.</p>
+        <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank">
+          <img src="images/advent-puzzle-1.jpg" alt="24-Day Advent Puzzle Calendar" style="cursor:pointer;">
+        </a>
+        <p>Yet in today's world, true family time often gets buried under busy schedules, glowing screens, and the fast pace of modern life. 💻📱 Grandparents miss out on bonding moments with their grandchildren, parents are consumed by work, and kids slip into the digital world instead of sitting down with family.</p>
+        <p>This Christmas, let's change that! 🎅 The <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Woodbests 24-Day Advent Puzzle Calendar</a> transforms the countdown to Christmas into a journey of surprises, laughter, and memories — becoming the perfect bridge for family time. 🧩✨</p>
+        <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank">
+          <img src="images/advent-puzzle-2.jpg" alt="Family Puzzle Time" style="cursor:pointer;">
+        </a>
+        <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank">
+          <img src="images/advent-puzzle-4.jpg" alt="24 Days of Continuous Fun" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">A 24-Day Journey, One Puzzle at a Time</h2>
+        <p>Picture this: It's December 1st, and you open a beautifully designed holiday gift box. 🎁 Inside are 24 smaller blind-box puzzles, each carefully crafted from <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">premium wood</a>, printed with vibrant festive artwork. 🎨 Tomorrow, you open another box — a brand-new design, no repeats, no boredom.</p>
+        <p>For 24 days, every morning or evening begins with excitement, discovery, and a shared family ritual. 🕯</p>
+        <p>By Christmas Eve, you've pieced together not only puzzles, but also <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">24 unique holiday stories</a>. It's a tradition that turns waiting into celebrating, building joy day after day. 🧩🎄</p>
+        <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank">
+          <img src="images/advent-puzzle-3.jpg" alt="Premium Wooden Puzzles" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">Why Families Love the Woodbests Advent Puzzle Calendar</h2>
+        <p>This calendar is more than just a set of puzzles. It's designed to become part of your holiday traditions, offering something meaningful for everyone:</p>
+        <ul>
+          <li><strong>For kids:</strong> The thrill of surprises, the joy of discovery, and the patience learned through puzzling. 🤩</li>
+          <li><strong>For parents:</strong> A chance to put work aside and be fully present with their children — even if only for 15 minutes a day. ⏳👨‍👩‍👧‍👦</li>
+          <li><strong>For grandparents:</strong> A warm way to connect, guide little hands, and share stories while helping kids find the right pieces. 👴👵</li>
+        </ul>
+        <p>Imagine this scene: The Christmas tree glows softly in the background. 🎄 A grandfather finds the missing edge piece, while his granddaughter squeals with joy as the snowman's scarf finally comes together. ❄ Parents sip hot cocoa 🍫☕, smiling as laughter fills the room. The puzzle pieces don't just form a picture — they weave <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">priceless memories</a>. 💖</p>
+        <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank">
+          <img src="images/advent-puzzle-6.jpg" alt="Weaving Priceless Memories" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">A Gift That Lasts Beyond Christmas</h2>
+        <p>With its <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">premium holiday packaging</a>, The Woodbests 24-Day Advent Puzzle Calendar is the perfect Christmas gift. 🎁 Whether for family, close friends, or even as a heartfelt surprise for yourself, it captures the essence of holiday giving: warmth, connection, and joy. 🎉</p>
+        <p>Unlike chocolates 🍬 that vanish in seconds or toys 🚂 that quickly lose their appeal, these puzzles offer <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">24 days of continuous fun</a>. Each day brings a fresh surprise, a reason to gather, and a moment worth celebrating. 🕯 By the end of December, you'll have not only a collection of beautiful wooden puzzles, but also a gallery of memories shared with the people you love most. 🖼✨</p>
+        <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank">
+          <img src="images/advent-puzzle-5.jpg" alt="A Gift That Lasts Beyond Christmas" style="cursor:pointer;">
+        </a>
+        <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank">
+          <img src="images/advent-puzzle-7.jpg" alt="A Gallery of Shared Memories" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">Passing Down Traditions Across Generations</h2>
+        <p>In a world where "family time" is too often replaced by screen time, The <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Woodbests 24-Day Advent Puzzle Calendar</a> brings back what really matters — presence. 👫 It invites families to slow down, reconnect, and build a tradition to pass on year after year. 🎉</p>
+        <p>What starts as a simple puzzle today will become tomorrow's family story: "Every December, we sat together, opened a new box, and built our Christmas piece by piece." 🧩</p>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;">Conclusion & Holiday Special</h2>
+        <p>This Christmas, give your family more than just a present.🎁 Give them the joy of togetherness, the laughter of teamwork, and the warmth of shared memories.🤗</p>
+        <p>✨ Order the <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;"><strong>Woodbests 24-Day Advent Puzzle Calendar</strong></a> today.</p>
+        <p>But hurry — this is a limited seasonal release. Once it's gone, you'll have to wait until next year.</p>
+        <p>👉 <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Shop now at Woodbests.com</a></p>
+        <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank">
+          <img src="images/advent-puzzle-8.jpg" alt="Shop Now at Woodbests.com" style="cursor:pointer;">
+        </a>
+      </div>
+    </main>
+    <!-- 右侧悬浮促销卡片 -->
+    <div class="promo-card-fixed">
+      <div class="promo-header">Advent Puzzle Calendar</div>
+      <img class="promo-img" src="images/advent-puzzle-1.jpg" alt="24-Day Advent Puzzle Calendar">
+      <div class="promo-badges">
+        <img src="images/guaranteed.png" alt="100% Guaranteed" title="100% Guaranteed">
+        <img src="images/no-mosquito.png" alt="Premium Wood" title="Premium Wood">
+      </div>
+      <a class="promo-link" href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank">Building Memories Together — by Woodbests</a>
+      <a href="redirect.html?product=advent-puzzle&to=https://woodbests.com/products/merry-puzzlemas-24-day-advent-calendar" target="_blank" class="green-btn">SHOP NOW <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</body>
+</html>

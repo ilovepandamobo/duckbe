@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piece by Piece: Strengthening Bonds Through Woodbests 3D Clock Building - Pandamobo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #f5f6fa; }
+    .news-topbar {
+      background: #111;
+      color: #fff;
+      padding: 0;
+      border-bottom: 1.5px solid #e5e7eb;
+    }
+    .news-topbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 54px;
+      padding: 0 32px;
+    }
+    .news-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .news-logo img {
+      height: 32px;
+      width: 32px;
+      border-radius: 6px;
+      background: #fff;
+      object-fit: contain;
+    }
+    .news-logo span {
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .news-nav {
+      display: flex;
+      gap: 28px;
+    }
+    .news-nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 1.08rem;
+      font-weight: 500;
+      transition: color 0.18s;
+    }
+    .news-nav a:hover { color: #fff; }
+    .main-wrap {
+      display: flex;
+      flex-direction: row;
+      max-width: 1100px;
+      margin: 32px auto 0 auto;
+      gap: 36px;
+      min-height: 600px;
+    }
+    .main-content {
+      flex: 1 1 0;
+      max-width: 620px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+      padding: 36px 32px 32px 32px;
+      margin-bottom: 32px;
+    }
+    .news-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .news-author-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #e5e7eb;
+    }
+    .news-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .news-author {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .news-date {
+      font-size: 0.97rem;
+      color: #64748b;
+    }
+    .review-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      margin-top: 0;
+      line-height: 1.2;
+    }
+    .review-section img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      margin: 18px auto 18px auto;
+      display: block;
+      box-shadow: 0 2px 12px rgba(30,41,59,0.10);
+    }
+    .review-section {
+      margin-bottom: 28px;
+    }
+    .review-section p {
+      font-size: 1.08rem;
+      color: #222;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+    .review-section ul {
+      margin: 0 0 16px 24px;
+      color: #222;
+      font-size: 1.08rem;
+    }
+    .review-section strong {
+      color: #1a2233;
+    }
+    .review-section em {
+      color: #2563eb;
+    }
+    /* 右侧悬浮促销卡片 */
+    .promo-card-fixed {
+      position: fixed;
+      top: 90px;
+      right: 48px;
+      z-index: 1000;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(30,41,59,0.13);
+      max-width: 320px;
+      width: 300px;
+      padding: 0 0 32px 0;
+      border: 1.5px solid #e5e7eb;
+      text-align: center;
+      transition: box-shadow 0.18s;
+    }
+    .promo-header {
+      background: #222;
+      color: #fff;
+      border-radius: 24px 24px 0 0;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 16px 0 12px 0;
+      letter-spacing: 0.5px;
+    }
+    .promo-img {
+      width: 80%;
+      margin: 16px auto 8px auto;
+      display: block;
+      border-radius: 12px;
+      background: #f7fafc;
+    }
+    .promo-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .promo-badges img {
+      height: 40px;
+      width: auto;
+    }
+    .promo-link {
+      color: #0074d9;
+      font-size: 1.05rem;
+      text-decoration: underline;
+      font-weight: 600;
+      margin: 10px 0 18px 0;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .green-btn {
+      display: block;
+      width: 90%;
+      margin: 22px auto 0 auto;
+      background: linear-gradient(90deg,#1ed760 0%,#00c853 100%);
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 0;
+      box-shadow: 0 4px 16px rgba(30,41,59,0.13);
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.12s;
+      text-align: center;
+      text-decoration: none;
+    }
+    .green-btn:hover {
+      background: linear-gradient(90deg,#00c853 0%,#1ed760 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .green-btn .arrow {
+      font-size: 1.2em;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    @media (max-width: 1100px) {
+      .main-wrap { gap: 0; }
+      .promo-card-fixed { display: none; }
+    }
+    @media (max-width: 700px) {
+      .main-content { padding: 18px 6vw 18px 6vw; }
+      .news-topbar-inner { padding: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 顶部专业新闻导航 -->
+  <div class="news-topbar">
+    <div class="news-topbar-inner">
+      <div class="news-logo">
+        <img src="images/panda-logo.png" alt="Panda Logo">
+        <span>Pandamobo Trending</span>
+      </div>
+      <nav class="news-nav">
+        <a href="index.html">Home</a>
+        <a href="#">Reviews</a>
+        <a href="#">Tech</a>
+        <a href="#">Health</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="main-wrap">
+    <main class="main-content">
+      <div class="news-header">
+        <img class="news-author-avatar" src="https://randomuser.me/api/portraits/women/29.jpg" alt="Maria Rodriguez">
+        <div class="news-meta">
+          <span class="news-author">By Maria Rodriguez</span>
+          <span class="news-date">December 19th, 2025</span>
+        </div>
+      </div>
+      <h1 class="review-title">Piece by Piece: Strengthening Bonds Through Woodbests 3D Clock Building</h1>
+      <div class="review-section">
+        <p>We've all seen it: a living room full of people, yet everyone is staring at their phones. 📱</p>
+        <p>It looks like family time — but it's really just quiet isolation.</p>
+        <p>True connection isn't just about being in the same place. It's about sharing presence, laughter, and little moments that turn into memories. That's exactly what the <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Woodbests 3D Wooden Puzzle Clock</a> creates — an excuse to put the screens down, gather around the table, and build something meaningful together. 💛</p>
+        <p>This isn't just a craft. It's a way to bring people closer, one gear at a time. ⚙️</p>
+        <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/piece-by-piece-1.png" alt="3D Wooden Puzzle Clock Building Together" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">🤝 Building Together</h2>
+        <p>The magic starts as soon as you open the box.</p>
+        <p>Instead of drifting off to their own corners, everyone leans in. They sort the pieces, read the instructions, and start figuring out how the gears, panels, and delicate wooden parts fit together. Some people become the leaders, others the quiet problem-solvers — and before long, everyone's hands are moving. 🖐</p>
+        <p>It's teamwork in the purest form. You divide tasks, help each other, and work toward one shared goal: a beautiful, functioning clock that belongs to all of you. 🕰</p>
+        <p>Even those who don't usually enjoy crafts find themselves pulled in by the energy and curiosity of building something together.</p>
+        <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/piece-by-piece-2.png" alt="Building Together" style="cursor:pointer;">
+        </a>
+        <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/piece-by-piece-4.png" alt="Teamwork in Action" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">💬 Creating Shared Joy</h2>
+        <p>With every satisfying click of a piece locking into place, the room fills with little bursts of celebration. 🙌</p>
+        <p>For families, it's a rare chance to see kids light up as they solve problems alongside their parents. For couples, it becomes a cozy weekend ritual — talking, laughing, and quietly cheering each other on. For friends, it's a refreshing alternative to movie nights or endless scrolling sessions.</p>
+        <p>Each small success builds momentum, and by the end, you're not just proud of the clock — you're proud of each other. That feeling of shared achievement is what makes the experience unforgettable. 💞</p>
+        <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/piece-by-piece-3.png" alt="Creating Shared Joy" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">🌟 More Meaningful Than Screen Time</h2>
+        <p>It's easy to sit next to each other and scroll or watch TV, but those moments blur together and fade.</p>
+        <p>Building a <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Woodbests 3D clock</a> is different. It demands focus, patience, and most importantly — presence. Instead of zoning out, you tune in to each other. You talk, you laugh, you troubleshoot, and you discover how much more fun it is to create something together. 🧘‍♀️</p>
+        <p>And when it's done, the clock becomes more than décor. It becomes a symbol of the hours you chose to spend fully present — proof that time together matters more than time online. ⏳</p>
+        <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/piece-by-piece-6.png" alt="More Meaningful Than Screen Time" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:10px;">🏡 Keepsakes That Hold Memories</h2>
+        <p>And the clock is just the start.</p>
+        <p><a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Woodbests</a> also offers other 3D puzzle kits that are perfect for shared moments: glowing <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">3D Puzzle Night Lights</a> 🌙 that light up your evenings, magical <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">3D Book Nooks</a> 📚 to slip between your favorite novels, and charming <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">DIY Dollhouse or Miniature House Kits</a> 🏡 filled with intricate details.</p>
+        <p>Each one is more than a project — it's a chance to create, connect, and make something beautiful together.</p>
+        <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/piece-by-piece-5.png" alt="Keepsakes That Hold Memories" style="cursor:pointer;">
+        </a>
+      </div>
+      <div class="review-section">
+        <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;">💛 Time Well Spent</h2>
+        <p>In the end, building the <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;"><strong>Woodbests 3D Wooden Puzzle Clock</strong></a> isn't just about making something beautiful. It's about making time for each other.</p>
+        <p>Every piece you place is a moment shared — proof that you slowed down, showed up, and chose each other.</p>
+        <p>✨ <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" style="color:#1ed760;font-weight:700;text-decoration:underline;">Shop now at Woodbests.com</a> and enjoy BUY 2 GET 10% OFF, BUY 3 GET 20% OFF.</p>
+        <p>Build more than a clock.</p>
+        <p>Build memories that last. 🧩💛</p>
+        <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">
+          <img src="images/piece-by-piece-8.png" alt="Build Memories That Last" style="cursor:pointer;">
+        </a>
+      </div>
+    </main>
+    <!-- 右侧悬浮促销卡片 -->
+    <div class="promo-card-fixed">
+      <div class="promo-header">Piece by Piece</div>
+      <img class="promo-img" src="images/piece-by-piece-1.png" alt="3D Wooden Puzzle Clock">
+      <div class="promo-badges">
+        <img src="images/guaranteed.png" alt="100% Guaranteed" title="100% Guaranteed">
+        <img src="images/no-mosquito.png" alt="Premium Wood" title="Premium Wood">
+      </div>
+      <a class="promo-link" href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank">Strengthening Bonds — by Woodbests</a>
+      <a href="redirect.html?product=3d-clock&to=https://woodbests.com/collections/3d-wooden-puzzle" target="_blank" class="green-btn">SHOP NOW <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</body>
+</html>
+

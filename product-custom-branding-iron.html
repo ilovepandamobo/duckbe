@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Branding Iron Review - Pandamobo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #f5f6fa; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .news-topbar { background: #111; color: #fff; border-bottom: 1.5px solid #e5e7eb; }
+    .news-topbar-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 54px; padding: 0 32px; }
+    .news-logo { display: flex; align-items: center; gap: 10px; }
+    .news-logo img { height: 32px; width: 32px; border-radius: 6px; background: #fff; object-fit: contain; }
+    .news-logo span { font-size: 1.45rem; font-weight: 900; letter-spacing: 1px; color: #fff; font-family: 'Segoe UI', Arial, sans-serif; }
+    .news-nav { display: flex; gap: 28px; }
+    .news-nav a { color: #cbd5e1; text-decoration: none; font-size: 1.08rem; font-weight: 500; transition: color 0.18s; }
+    .news-nav a:hover { color: #fff; }
+    .main-wrap { display: flex; flex-direction: row; max-width: 1100px; margin: 32px auto 0 auto; gap: 36px; min-height: 600px; }
+    .main-content { flex: 1 1 0; max-width: 680px; background: #fff; border-radius: 16px; box-shadow: 0 2px 12px rgba(30,41,59,0.07); padding: 40px; margin-bottom: 32px; }
+    .news-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+    .news-author-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .news-meta { display: flex; flex-direction: column; gap: 2px; }
+    .news-author { font-size: 1.1rem; font-weight: 700; color: #222; }
+    .news-date { font-size: 0.95rem; color: #64748b; }
+    .review-title { font-size: 2.4rem; font-weight: 800; margin-bottom: 24px; margin-top: 0; line-height: 1.15; letter-spacing: -0.5px; color: #111; }
+    .review-section img { width: 100%; border-radius: 12px; margin: 24px 0; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; }
+    .review-section img:hover { transform: scale(1.01); }
+    .review-section { margin-bottom: 32px; }
+    .review-section p { font-size: 1.15rem; color: #334155; margin-bottom: 18px; line-height: 1.75; }
+    .review-section h2 { font-size: 1.6rem; font-weight: 800; margin: 32px 0 16px 0; color: #1e293b; letter-spacing: -0.3px; }
+    .review-section h3 { font-size: 1.3rem; font-weight: 700; margin: 24px 0 12px 0; color: #334155; }
+    .review-section ul { margin: 0 0 24px 24px; color: #334155; font-size: 1.1rem; line-height: 1.6; }
+    .review-section li { margin-bottom: 10px; }
+    .review-section strong { color: #0f172a; font-weight: 700; }
+    .highlight-box { background: #f0fdf4; border-left: 5px solid #1ed760; padding: 20px; border-radius: 8px; margin: 24px 0; }
+    .quote-box { font-style: italic; font-size: 1.2rem; color: #475569; border-left: 4px solid #cbd5e1; padding-left: 20px; margin: 24px 0; background: #f8fafc; padding: 20px; border-radius: 0 8px 8px 0; }
+    
+    /* Promo Card Styles */
+    .promo-card-fixed { position: sticky; top: 20px; height: fit-content; z-index: 100; background: #fff; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 340px; width: 100%; padding: 0 0 32px 0; border: 1px solid #e2e8f0; text-align: center; transition: all 0.3s ease; }
+    .promo-header { background: #1e293b; color: #fff; border-radius: 24px 24px 0 0; font-size: 1.2rem; font-weight: 700; padding: 18px 0; letter-spacing: 0.5px; text-transform: uppercase; }
+    .promo-img { width: 85%; margin: 20px auto 10px auto; display: block; border-radius: 12px; background: #f1f5f9; object-fit: cover; aspect-ratio: 1/1; }
+    .promo-price-box { margin: 10px 0; }
+    .old-price { text-decoration: line-through; color: #94a3b8; font-size: 1.1rem; margin-right: 10px; }
+    .new-price { color: #ef4444; font-size: 1.8rem; font-weight: 800; }
+    .promo-badges { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
+    .promo-badges img { height: 45px; width: auto; }
+    .promo-link { color: #2563eb; font-size: 1.1rem; text-decoration: none; font-weight: 600; margin: 5px 0 20px 0; display: inline-block; transition: color 0.2s; }
+    .promo-link:hover { color: #1d4ed8; text-decoration: underline; }
+    .green-btn { display: block; width: 85%; margin: 0 auto; background: linear-gradient(135deg,#22c55e 0%,#16a34a 100%); color: #fff; font-size: 1.25rem; font-weight: 800; border: none; border-radius: 12px; padding: 18px 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); letter-spacing: 0.5px; cursor: pointer; transition: all 0.2s; text-align: center; text-decoration: none; text-transform: uppercase; }
+    .green-btn:hover { background: linear-gradient(135deg,#16a34a 0%,#15803d 100%); transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+    .green-btn .arrow { font-size: 1.2em; margin-left: 8px; display: inline-block; transition: transform 0.2s; }
+    .green-btn:hover .arrow { transform: translateX(4px); }
+    
+    /* Testimonial Mini-Section */
+    .mini-review { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; color: #fbbf24; }
+    .verified-buyer { font-size: 0.85rem; color: #64748b; display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 5px; }
+    
+    @media (max-width: 1100px) { 
+      .main-wrap { flex-direction: column; gap: 0; } 
+      .promo-card-fixed { display: none; } 
+      .main-content { max-width: 100%; box-shadow: none; padding: 20px; }
+    }
+    @media (max-width: 700px) { 
+      .news-topbar-inner { padding: 0 16px; }
+      .review-title { font-size: 1.8rem; } 
+    }
+  </style>
+</head>
+<body>
+  <div class="news-topbar">
+    <div class="news-topbar-inner">
+      <div class="news-logo">
+        <img src="images/panda-logo.png" alt="Panda Logo">
+        <span>Pandamobo Trending</span>
+      </div>
+      <nav class="news-nav">
+        <a href="index.html">Home</a>
+        <a href="#">Reviews</a>
+        <a href="#">Tech</a>
+        <a href="#">Crafts</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="main-wrap">
+    <main class="main-content">
+      <div class="news-header">
+        <img class="news-author-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Jenkins">
+        <div class="news-meta">
+          <span class="news-author">By Sarah Jenkins</span>
+          <span class="news-date">Updated December 1st, 2025</span>
+        </div>
+      </div>
+      <h1 class="review-title">"I Stopped Signing My Work with a Pen" — The $33 Tool That Makes Every Project Look Expensive</h1>
+      
+      <div class="review-section">
+        <p><strong>Here is a harsh truth:</strong> You can spend 40 hours crafting the perfect wooden cutting board or hand-stitching a leather wallet, but if you finish it by scribbling your initials with a Sharpie, you just devalued your own work.</p>
+        
+        <p>For years, I struggled with this. I wanted my handmade gifts to look professional, but I couldn't afford those massive industrial branding machines. Then I found this.</p>
+
+        <a href="redirect.html?product=custom-branding-iron&to=https://www.duckbe.com/products/personalized-wood-branding-iron-custom-electric-branding-iron-with-custom-stamp-wood-branding-iron-leather-branding-iron" target="_blank">
+          <img src="images/branding-iron-1.jpg" alt="Custom branding iron heating up" style="cursor:pointer;" title="Click to check availability">
+        </a>
+
+        <p>Meet the <strong>Personalized Electric Branding Iron</strong> by Duckbe. It’s compact, customizable, and currently costs less than a decent dinner. Since I started using it, three people have asked me if I started a "real business." That is the power of a professional logo.</p>
+      </div>
+
+      <div class="review-section">
+        <h2>Why It's Not Just "Another Tool"</h2>
+        <p>Most branding irons are old-school—you have to heat them with a blowtorch. That's dangerous and inconsistent. This game-changer is <strong>electric</strong>. It maintains the perfect temperature for a consistent, crisp burn every single time.</p>
+        
+        <div class="highlight-box">
+          <p><strong>🔥 Pro Tip:</strong> It's not just for wood! I've used this on leather belts, cardboard gift boxes, and yes—I even branded the buns at my husband's 40th birthday BBQ. The crowd went wild.</p>
+        </div>
+
+        <a href="redirect.html?product=custom-branding-iron&to=https://www.duckbe.com/products/personalized-wood-branding-iron-custom-electric-branding-iron-with-custom-stamp-wood-branding-iron-leather-branding-iron" target="_blank">
+          <img src="images/branding-iron-2.jpg" alt="Branding on steak and burger buns" style="cursor:pointer;">
+        </a>
+        
+        <p>Imagine serving a steak with your family name seared into it. It’s the ultimate flex.</p>
+      </div>
+
+      <div class="review-section">
+        <h2>How It Works (It's Stupidly Simple)</h2>
+        <p>You don't need to be an engineer to use this.</p>
+        <ol style="font-size: 1.1rem; line-height: 1.8; margin-left: 20px; color: #334155;">
+          <li><strong>Upload Your Design:</strong> Send them your logo, signature, or just pick a font.</li>
+          <li><strong>Heat It Up:</strong> Plug it in and wait about 5 minutes.</li>
+          <li><strong>Press:</strong> Gently press onto your material for 3-5 seconds.</li>
+          <li><strong>Admire:</strong> Peel it back to reveal a perfect, dark, permanent mark.</li>
+        </ol>
+
+        <a href="redirect.html?product=custom-branding-iron&to=https://www.duckbe.com/products/personalized-wood-branding-iron-custom-electric-branding-iron-with-custom-stamp-wood-branding-iron-leather-branding-iron" target="_blank">
+          <img src="images/branding-iron-4.jpg" alt="Step by step process of branding wood" style="cursor:pointer;">
+        </a>
+      </div>
+
+      <div class="review-section">
+        <h2>Real Results from Real People</h2>
+        <p>I’m not the only one obsessed. The crafting community is buzzing about this thing. Check out what some fellow makers are doing:</p>
+        
+        <div class="quote-box">
+          "I make custom furniture. Before this iron, I used a sticker. It looked cheap. Now, I burn my logo into the underside of every table. My customers love finding it—it’s like an easter egg of quality."<br>
+          <span style="font-size: 1rem; font-weight: 600; color: #222; display: block; margin-top: 10px;">— Mike T., Carpenter</span>
+        </div>
+
+        <a href="redirect.html?product=custom-branding-iron&to=https://www.duckbe.com/products/personalized-wood-branding-iron-custom-electric-branding-iron-with-custom-stamp-wood-branding-iron-leather-branding-iron" target="_blank">
+          <img src="images/branding-iron-5.jpg" alt="Collage of user submitted branded items" style="cursor:pointer;">
+        </a>
+      </div>
+
+      <div class="review-section">
+        <h2>5 Reasons You Need This in Your Workshop</h2>
+        <ul>
+          <li><strong>Instant Professionalism:</strong> It elevates "homemade" to "handcrafted."</li>
+          <li><strong>Versatility:</strong> Wood, Leather, Paper, Cork, Meat, Fruit Rinds.</li>
+          <li><strong>Interchangeable Heads:</strong> You can buy extra brass heads for different logos (e.g., one for your shop, one for your wedding).</li>
+          <li><strong>Durable Brass:</strong> The head is solid brass. It holds heat perfectly and won't warp.</li>
+          <li><strong>The Price:</strong> Similar custom irons usually cost $80+. This is currently under $35.</li>
+        </ul>
+
+        <a href="redirect.html?product=custom-branding-iron&to=https://www.duckbe.com/products/personalized-wood-branding-iron-custom-electric-branding-iron-with-custom-stamp-wood-branding-iron-leather-branding-iron" target="_blank">
+          <img src="images/branding-iron-3.jpg" alt="Full kit with gift box" style="cursor:pointer;">
+        </a>
+      </div>
+
+      <div class="review-section">
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>Q: Can I use my own logo?</strong><br>
+        A: Yes! You simply upload your image file when you order. They handle the rest.</p>
+        
+        <p><strong>Q: Do I need a voltage converter?</strong><br>
+        A: No, you can choose the correct plug (US, EU, UK, AU) for your country at checkout.</p>
+        
+        <p><strong>Q: Is it hard to clean?</strong><br>
+        A: Not really. If you use it on food, just wipe the brass head with a damp cloth once it cools down. For wood/leather, it barely needs cleaning.</p>
+      </div>
+
+      <div class="review-section">
+        <h2 style="color: #b91c1c;">⚠️ Warning: High Demand Alert</h2>
+        <p>Because of the viral videos on TikTok and Instagram, the <strong>Custom Electric Branding Iron</strong> has been selling out repeatedly. The current stock is expected to last only until the end of the week.</p>
+        
+        <p>If you want to secure one for yourself (or as the perfect gift for the maker in your life), do not wait. The 20% OFF discount code is automatically applied through the link below.</p>
+        
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="redirect.html?product=custom-branding-iron&to=https://www.duckbe.com/products/personalized-wood-branding-iron-custom-electric-branding-iron-with-custom-stamp-wood-branding-iron-leather-branding-iron" target="_blank" class="green-btn">Check Availability & Get 20% OFF &rarr;</a>
+          <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px;">30-Day Money-Back Guarantee | Fast Shipping</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Floating Promo Card -->
+    <div class="promo-card-fixed">
+      <div class="promo-header">Creator's Choice</div>
+      <img class="promo-img" src="images/branding-iron-1.jpg" alt="Branding Iron">
+      
+      <div class="promo-price-box">
+        <span class="old-price">$47.90</span>
+        <span class="new-price">$32.99</span>
+      </div>
+
+      <div class="mini-review">
+        ★★★★★ <span>(179 Reviews)</span>
+      </div>
+      
+      <div class="verified-buyer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Verified Purchase
+      </div>
+
+      <div class="promo-badges" style="margin-top: 15px;">
+        <img src="images/guaranteed.png" alt="Quality Guaranteed" title="Quality Guaranteed">
+        <img src="images/no-mosquito.png" alt="Fast Shipping" title="Fast Shipping">
+      </div>
+      
+      <a class="promo-link" href="redirect.html?product=custom-branding-iron&to=https://www.duckbe.com/products/personalized-wood-branding-iron-custom-electric-branding-iron-with-custom-stamp-wood-branding-iron-leather-branding-iron" target="_blank">Make Your Mark — by Duckbe</a>
+      
+      <a href="redirect.html?product=custom-branding-iron&to=https://www.duckbe.com/products/personalized-wood-branding-iron-custom-electric-branding-iron-with-custom-stamp-wood-branding-iron-leather-branding-iron" target="_blank" class="green-btn">Shop Now <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</body>
+</html>

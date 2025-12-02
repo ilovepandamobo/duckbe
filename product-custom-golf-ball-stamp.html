@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Golf Ball Stamp Review - Pandamobo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #f5f6fa; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .news-topbar { background: #111; color: #fff; border-bottom: 1.5px solid #e5e7eb; }
+    .news-topbar-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 54px; padding: 0 32px; }
+    .news-logo { display: flex; align-items: center; gap: 10px; }
+    .news-logo img { height: 32px; width: 32px; border-radius: 6px; background: #fff; object-fit: contain; }
+    .news-logo span { font-size: 1.45rem; font-weight: 900; letter-spacing: 1px; color: #fff; font-family: 'Segoe UI', Arial, sans-serif; }
+    .news-nav { display: flex; gap: 28px; }
+    .news-nav a { color: #cbd5e1; text-decoration: none; font-size: 1.08rem; font-weight: 500; transition: color 0.18s; }
+    .news-nav a:hover { color: #fff; }
+    .main-wrap { display: flex; flex-direction: row; max-width: 1100px; margin: 32px auto 0 auto; gap: 36px; min-height: 600px; }
+    .main-content { flex: 1 1 0; max-width: 680px; background: #fff; border-radius: 16px; box-shadow: 0 2px 12px rgba(30,41,59,0.07); padding: 40px; margin-bottom: 32px; }
+    .news-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+    .news-author-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .news-meta { display: flex; flex-direction: column; gap: 2px; }
+    .news-author { font-size: 1.1rem; font-weight: 700; color: #222; }
+    .news-date { font-size: 0.95rem; color: #64748b; }
+    .review-title { font-size: 2.4rem; font-weight: 800; margin-bottom: 24px; margin-top: 0; line-height: 1.15; letter-spacing: -0.5px; color: #111; }
+    .review-section img { width: 100%; border-radius: 12px; margin: 24px 0; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; }
+    .review-section img:hover { transform: scale(1.01); }
+    .review-section { margin-bottom: 32px; }
+    .review-section p { font-size: 1.15rem; color: #334155; margin-bottom: 18px; line-height: 1.75; }
+    .review-section h2 { font-size: 1.6rem; font-weight: 800; margin: 32px 0 16px 0; color: #1e293b; letter-spacing: -0.3px; }
+    .review-section h3 { font-size: 1.3rem; font-weight: 700; margin: 24px 0 12px 0; color: #334155; }
+    .review-section ul { margin: 0 0 24px 24px; color: #334155; font-size: 1.1rem; line-height: 1.6; }
+    .review-section li { margin-bottom: 10px; }
+    .review-section strong { color: #0f172a; font-weight: 700; }
+    .highlight-box { background: #f0fdf4; border-left: 5px solid #1ed760; padding: 20px; border-radius: 8px; margin: 24px 0; }
+    .quote-box { font-style: italic; font-size: 1.2rem; color: #475569; border-left: 4px solid #cbd5e1; padding-left: 20px; margin: 24px 0; background: #f8fafc; padding: 20px; border-radius: 0 8px 8px 0; }
+    
+    /* Promo Card Styles */
+    .promo-card-fixed { position: sticky; top: 20px; height: fit-content; z-index: 100; background: #fff; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 340px; width: 100%; padding: 0 0 32px 0; border: 1px solid #e2e8f0; text-align: center; transition: all 0.3s ease; }
+    .promo-header { background: #1e293b; color: #fff; border-radius: 24px 24px 0 0; font-size: 1.2rem; font-weight: 700; padding: 18px 0; letter-spacing: 0.5px; text-transform: uppercase; }
+    .promo-img { width: 85%; margin: 20px auto 10px auto; display: block; border-radius: 12px; background: #f1f5f9; object-fit: cover; aspect-ratio: 1/1; }
+    .promo-price-box { margin: 10px 0; }
+    .old-price { text-decoration: line-through; color: #94a3b8; font-size: 1.1rem; margin-right: 10px; }
+    .new-price { color: #ef4444; font-size: 1.8rem; font-weight: 800; }
+    .promo-badges { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
+    .promo-badges img { height: 45px; width: auto; }
+    .promo-link { color: #2563eb; font-size: 1.1rem; text-decoration: none; font-weight: 600; margin: 5px 0 20px 0; display: inline-block; transition: color 0.2s; }
+    .promo-link:hover { color: #1d4ed8; text-decoration: underline; }
+    .green-btn { display: block; width: 85%; margin: 0 auto; background: linear-gradient(135deg,#22c55e 0%,#16a34a 100%); color: #fff; font-size: 1.25rem; font-weight: 800; border: none; border-radius: 12px; padding: 18px 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); letter-spacing: 0.5px; cursor: pointer; transition: all 0.2s; text-align: center; text-decoration: none; text-transform: uppercase; }
+    .green-btn:hover { background: linear-gradient(135deg,#16a34a 0%,#15803d 100%); transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+    .green-btn .arrow { font-size: 1.2em; margin-left: 8px; display: inline-block; transition: transform 0.2s; }
+    .green-btn:hover .arrow { transform: translateX(4px); }
+    
+    /* Testimonial Mini-Section */
+    .mini-review { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; color: #fbbf24; }
+    .verified-buyer { font-size: 0.85rem; color: #64748b; display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 5px; }
+    
+    @media (max-width: 1100px) { 
+      .main-wrap { flex-direction: column; gap: 0; } 
+      .promo-card-fixed { display: none; } 
+      .main-content { max-width: 100%; box-shadow: none; padding: 20px; }
+    }
+    @media (max-width: 700px) { 
+      .news-topbar-inner { padding: 0 16px; }
+      .review-title { font-size: 1.8rem; } 
+    }
+  </style>
+</head>
+<body>
+  <div class="news-topbar">
+    <div class="news-topbar-inner">
+      <div class="news-logo">
+        <img src="images/panda-logo.png" alt="Panda Logo">
+        <span>Pandamobo Trending</span>
+      </div>
+      <nav class="news-nav">
+        <a href="index.html">Home</a>
+        <a href="#">Reviews</a>
+        <a href="#">Tech</a>
+        <a href="#">Sports</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="main-wrap">
+    <main class="main-content">
+      <div class="news-header">
+        <img class="news-author-avatar" src="https://randomuser.me/api/portraits/men/15.jpg" alt="David Miller">
+        <div class="news-meta">
+          <span class="news-author">By David Miller</span>
+          <span class="news-date">Updated December 1st, 2025</span>
+        </div>
+      </div>
+      <h1 class="review-title">"Is That My Ball?" — The $20 Hack That Stops Golf Course Confusion Forever</h1>
+      
+      <div class="review-section">
+        <p><strong>We've all been there:</strong> You crush a drive down the fairway, walk up to your ball, and spend 30 seconds squinting at it, trying to remember if you were playing a Titleist 3 or a Callaway 4. Or worse—someone else plays your ball by mistake.</p>
+        
+        <p>Marking your ball with a Sharpie dot is ugly and fades by the 4th hole. But custom printed balls cost a fortune. That's why this new gadget is going viral in pro shops everywhere.</p>
+
+        <a href="redirect.html?product=custom-golf-stamp&to=https://www.duckbe.com/products/custom-golf-ball-stamp-zrb0" target="_blank">
+          <img src="images/golf-stamp-1.jpg" alt="Custom golf ball stamp in action" style="cursor:pointer;" title="Click to verify price">
+        </a>
+
+        <p>Meet the <strong>Custom Golf Ball Stamp</strong>. It allows you to stamp your face, your pet, your initials, or a lucky symbol directly onto your ball in milliseconds. It looks professionally printed, but costs pennies per ball.</p>
+      </div>
+
+      <div class="review-section">
+        <h2>Why Golfers Are Obsessed With This</h2>
+        <p>It’s not just about identification; it’s about <strong>psychological warfare</strong> (okay, maybe just fun). Imagine your buddy slicing into the woods and finding a ball with your smiling face on it. Priceless.</p>
+        
+        <div class="highlight-box">
+          <p><strong>💧 Waterproof & Durable:</strong> Unlike a marker pen that smears when wet, this ink is designed for the elements. It dries instantly and stays crisp through bunkers, water hazards, and cart path bounces.</p>
+        </div>
+
+        <a href="redirect.html?product=custom-golf-stamp&to=https://www.duckbe.com/products/custom-golf-ball-stamp-zrb0" target="_blank">
+          <img src="images/golf-stamp-2.jpg" alt="Stamping a golf ball" style="cursor:pointer;">
+        </a>
+        
+        <p>The stamp is pre-inked and good for hundreds of impressions before needing a refill. It's small enough to clip onto your bag or keep in your pocket.</p>
+      </div>
+
+      <div class="review-section">
+        <h2>How It Works</h2>
+        <ol style="font-size: 1.1rem; line-height: 1.8; margin-left: 20px; color: #334155;">
+          <li><strong>Customize:</strong> Upload a photo or choose an icon/text online.</li>
+          <li><strong>Stamp:</strong> Press the stamp gently onto the ball surface.</li>
+          <li><strong>Play:</strong> The ink dries in seconds. You are ready to tee off.</li>
+        </ol>
+
+        <a href="redirect.html?product=custom-golf-stamp&to=https://www.duckbe.com/products/custom-golf-ball-stamp-zrb0" target="_blank">
+          <img src="images/golf-stamp-4.jpg" alt="Step by step instructions" style="cursor:pointer;">
+        </a>
+      </div>
+
+      <div class="review-section">
+        <h2>"Best Gift I Got This Year"</h2>
+        <p>Finding a gift for a golfer is a nightmare. They already have the clubs and the bag. This is that rare "under $25" gift that they actually use every single round.</p>
+        
+        <div class="quote-box">
+          "I bought one with a picture of my dog. Now whenever I have a bad putt, I look at my ball and it calms me down. Plus, nobody ever accidentally steals my ball anymore!"<br>
+          <span style="font-size: 1rem; font-weight: 600; color: #222; display: block; margin-top: 10px;">— James R., Handicap 12</span>
+        </div>
+
+        <a href="redirect.html?product=custom-golf-stamp&to=https://www.duckbe.com/products/custom-golf-ball-stamp-zrb0" target="_blank">
+          <img src="images/golf-stamp-5.jpg" alt="Collection of funny stamped balls" style="cursor:pointer;">
+        </a>
+      </div>
+
+      <div class="review-section">
+        <h2>Features at a Glance</h2>
+        <ul>
+          <li><strong>Instant Identification:</strong> Never play the wrong ball again (2-stroke penalty saved!).</li>
+          <li><strong>Permanent Ink:</strong> Waterproof and smudge-proof.</li>
+          <li><strong>Fully Custom:</strong> Logos, faces, text, or patterns.</li>
+          <li><strong>Compact:</strong> Fits easily in your golf bag.</li>
+          <li><strong>Great Value:</strong> Stamp hundreds of balls for the price of one dozen custom balls.</li>
+        </ul>
+
+        <a href="redirect.html?product=custom-golf-stamp&to=https://www.duckbe.com/products/custom-golf-ball-stamp-zrb0" target="_blank">
+          <img src="images/golf-stamp-3.jpg" alt="Product packaging and stamp" style="cursor:pointer;">
+        </a>
+      </div>
+
+      <div class="review-section">
+        <h2 style="color: #b91c1c;">⚠️ Limited Time Offer</h2>
+        <p>These stamps are trending heavily on golf forums right now. The manufacturer has released a limited batch of "Quick-Dry" ink versions.</p>
+        
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="redirect.html?product=custom-golf-stamp&to=https://www.duckbe.com/products/custom-golf-ball-stamp-zrb0" target="_blank" class="green-btn">Customize Your Stamp Now &rarr;</a>
+          <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px;">Ships Worldwide | Satisfaction Guaranteed</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Floating Promo Card -->
+    <div class="promo-card-fixed">
+      <div class="promo-header">Golfer's Essential</div>
+      <img class="promo-img" src="images/golf-stamp-1.jpg" alt="Golf Stamp">
+      
+      <div class="promo-price-box">
+        <span class="old-price">$38.00</span>
+        <span class="new-price">$23.99</span>
+      </div>
+      
+      <div style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 5px 10px; border-radius: 6px; margin: 0 auto 10px auto; width: fit-content; font-size: 0.9rem;">
+        SAVE 37% TODAY
+      </div>
+
+      <div class="mini-review">
+        ★★★★★ <span>(452 Reviews)</span>
+      </div>
+      
+      <div class="verified-buyer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Verified Purchase
+      </div>
+
+      <div class="promo-badges" style="margin-top: 15px;">
+        <img src="images/guaranteed.png" alt="Quality Guaranteed" title="Quality Guaranteed">
+        <img src="images/no-mosquito.png" alt="Fast Shipping" title="Fast Shipping">
+      </div>
+      
+      <a class="promo-link" href="redirect.html?product=custom-golf-stamp&to=https://www.duckbe.com/products/custom-golf-ball-stamp-zrb0" target="_blank">Mark Your Game — by Duckbe</a>
+      
+      <a href="redirect.html?product=custom-golf-stamp&to=https://www.duckbe.com/products/custom-golf-ball-stamp-zrb0" target="_blank" class="green-btn">Shop Now <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</body>
+</html>
+
