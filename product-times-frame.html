@@ -51,14 +51,102 @@
     .green-btn .arrow { font-size: 1.2em; margin-left: 8px; display: inline-block; transition: transform 0.2s; }
     .green-btn:hover .arrow { transform: translateX(4px); }
     
+    /* Coupon Box Styles */
+    .coupon-box {
+      margin-top: 15px;
+      background: linear-gradient(135deg, #fff5f5 0%, #ffe3e3 100%);
+      border: 2px dashed #ff6b6b;
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: pulse-border 2s infinite;
+    }
+    .coupon-title {
+      color: #c0392b;
+      font-weight: 800;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .coupon-code {
+      background: #fff;
+      color: #333;
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 4px 12px;
+      border-radius: 6px;
+      display: inline-block;
+      border: 1px solid #ffcccc;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    @keyframes pulse-border {
+      0% { border-color: #ff6b6b; }
+      50% { border-color: #ffb8b8; }
+      100% { border-color: #ff6b6b; }
+    }
+
     /* Testimonial Mini-Section */
     .mini-review { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; color: #fbbf24; }
     .verified-buyer { font-size: 0.85rem; color: #64748b; display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 5px; }
+    
+    /* Christmas Theme Accents */
+    .christmas-badge { background: #c0392b; color: #fff; font-weight: bold; padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; display: inline-block; vertical-align: middle; margin-left: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .snow-deco { position: absolute; top: -10px; right: -10px; font-size: 2rem; }
     
     @media (max-width: 1100px) { 
       .main-wrap { flex-direction: column; gap: 0; } 
       .promo-card-fixed { display: none; } 
       .main-content { max-width: 100%; box-shadow: none; padding: 20px; }
+      
+      /* Mobile Sticky Footer */
+      .mobile-sticky-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 12px 16px;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #eee;
+        padding-bottom: max(12px, env(safe-area-inset-bottom));
+      }
+      .mobile-price-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .mobile-price-current {
+        font-weight: 800;
+        color: #ef4444;
+        font-size: 1.2rem;
+      }
+      .mobile-price-original {
+        font-size: 0.85rem;
+        text-decoration: line-through;
+        color: #94a3b8;
+      }
+      .mobile-buy-btn {
+        background: linear-gradient(135deg,#0d9488 0%,#0f766e 100%);
+        color: #fff;
+        font-weight: 700;
+        padding: 10px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+        font-size: 1rem;
+      }
+      /* Add padding to body so content isn't hidden behind footer */
+      body { padding-bottom: 80px; }
+    }
+    @media (min-width: 1101px) {
+      .mobile-sticky-footer { display: none; }
     }
     @media (max-width: 700px) { 
       .news-topbar-inner { padding: 0 16px; }
@@ -96,24 +184,24 @@
       <div class="review-section">
         <p><strong>Let's be real:</strong> Digital photo frames have been "boring" since 2010. They sit on your shelf, display a grainy photo of your aunt, and collect dust. They are lifeless screens that look like cheap tablets glued to a plastic stand.</p>
         
-        <p>But last week, I saw something on Tech Twitter that stopped me mid-scroll. It didn't look like a screen. It looked like a <strong>floating, transparent portal</strong> to another dimension.</p>
+        <p>But last week, I saw something on Tech Twitter that stopped me mid-scroll. It didn't look like a screen. It looked like a <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>floating, transparent portal</strong></a> to another dimension.</p>
 
         <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank">
           <img src="images/times-frame-1.jpg" alt="Transparent IPS display" style="cursor:pointer;" title="Click to see the magic">
         </a>
 
-        <p>It's called the <strong>Divoom Times Frame</strong>, and it is, without exaggeration, the coolest desk accessory I have ever tested. It uses a transparent IPS panel that makes pixels look like they are hovering inside a glass block. It’s not just a frame; it’s a piece of Cyberpunk art.</p>
+        <p>It's called the <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>Divoom Times Frame</strong></a>, and it is, without exaggeration, the coolest desk accessory I have ever tested. It uses a <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>transparent IPS panel</strong></a> that makes pixels look like they are hovering inside a glass block. It’s not just a frame; it’s a piece of <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>Cyberpunk art</strong></a>.</p>
       </div>
 
       <div class="review-section">
         <h2>Why Your Desk Setup Needs This Upgrade</h2>
-        <p>Most "smart" displays are just distractions. They bombard you with news you don't care about. The Times Frame is different. It's designed for <strong>aesthetic intelligence</strong>.</p>
+        <p>Most "smart" displays are just distractions. They bombard you with news you don't care about. The Times Frame is different. It's designed for <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>aesthetic intelligence</strong></a>.</p>
         
         <div class="highlight-box">
-          <p><strong>🔥 The "Tony Stark" Effect:</strong> When you place this on your desk, it transforms the vibe instantly. The semi-transparent depth creates a 3D-like visual that makes stock tickers, weather widgets, and retro game animations look futuristic.</p>
+          <p><strong>🔥 The "Tony Stark" Effect:</strong> When you place this on your desk, it transforms the vibe instantly. The <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>semi-transparent depth</strong></a> creates a 3D-like visual that makes stock tickers, weather widgets, and retro game animations look futuristic.</p>
         </div>
 
-        <p>I use mine as a <strong>live financial tracker</strong> during the trading day. Seeing the K-line chart float transparently on my desk is infinitely more satisfying than checking an app. And when work is done? One tap, and it becomes a mesmerizing pixel art aquarium.</p>
+        <p>I use mine as a <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>live financial tracker</strong></a> during the trading day. Seeing the K-line chart float transparently on my desk is infinitely more satisfying than checking an app. And when work is done? One tap, and it becomes a mesmerizing <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>pixel art aquarium</strong></a>.</p>
 
         <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank">
           <img src="images/times-frame-2.jpg" alt="Pixel art clock and weather" style="cursor:pointer;">
@@ -122,20 +210,20 @@
 
       <div class="review-section">
         <h2>The "Relationship Saver" Feature</h2>
-        <p>Here is the feature that actually justifies the price tag: <strong>Smart Anniversary Mode</strong>.</p>
+        <p>Here is the feature that actually justifies the price tag: <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>Smart Anniversary Mode</strong></a>.</p>
         <p>We have all been there—life gets busy, and suddenly you realize it's your anniversary... at 8 PM. With the Times Frame, you can pre-set every birthday, anniversary, and relationship milestone in the app.</p>
         
         <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank">
           <img src="images/times-frame-6.jpg" alt="Smart anniversary mode interface" style="cursor:pointer;">
         </a>
 
-        <p>When that special day arrives, the frame <strong>automatically wakes up playing a curated slideshow</strong> of your favorite memories together. Imagine waking up on your anniversary to a glowing 3D display of your wedding photos, without having to lift a finger.</p>
+        <p>When that special day arrives, the frame <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>automatically wakes up playing a curated slideshow</strong></a> of your favorite memories together. Imagine waking up on your anniversary to a glowing 3D display of your wedding photos, without having to lift a finger.</p>
         <p>It makes every special occasion feel magical (and might just save you from the doghouse if you're prone to forgetting dates).</p>
       </div>
 
       <div class="review-section">
         <h2>It's Actually a Productivity Beast</h2>
-        <p>I didn't expect a "toy" to make me work harder, but here we are. The built-in <strong>Pomodoro Timer</strong> is a game-changer.</p>
+        <p>I didn't expect a "toy" to make me work harder, but here we are. The built-in <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>Pomodoro Timer</strong></a> is a game-changer.</p>
         <p>Instead of picking up my phone to set a timer (and accidentally scrolling TikTok for 20 minutes), I just glance at the Times Frame. It displays a visual countdown that keeps me in the "deep work" zone. It's a dedicated tool that respects your attention span.</p>
 
         <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank">
@@ -144,9 +232,9 @@
         
         <p><strong>Key Specs That Impressed Me:</strong></p>
         <ul>
-            <li><strong>64GB Massive Storage:</strong> That's enough for ~700,000 photos or 6,000 minutes of video. You will literally never run out of space.</li>
-            <li><strong>WiFi Connected:</strong> Updates weather, social media followers, and stocks in real-time.</li>
-            <li><strong>App Control:</strong> Upload photos/videos from anywhere in the world (iOS & Android).</li>
+            <li><a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>64GB Massive Storage:</strong></a> That's enough for ~700,000 photos or 6,000 minutes of video. You will literally never run out of space.</li>
+            <li><a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>WiFi Connected:</strong></a> Updates weather, social media followers, and stocks in real-time.</li>
+            <li><a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>App Control:</strong></a> Upload photos/videos from anywhere in the world (iOS & Android).</li>
         </ul>
 
         <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank">
@@ -156,7 +244,7 @@
 
       <div class="review-section">
         <h2>Infinite Art for Free? Yes, Please.</h2>
-        <p>The hardware is great, but the <strong>Divoom Community</strong> is the real killer app. Imagine having access to millions of talented artists who create stunning animations for your frame—for free.</p>
+        <p>The hardware is great, but the <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>Divoom Community</strong></a> is the real killer app. Imagine having access to millions of talented artists who create stunning animations for your frame—for free.</p>
         
         <div class="quote-box">
           "I change my frame's theme daily. Monday is Retro Gaming. Tuesday is Cyberpunk City. Wednesday is Cute Cats. It feels like I get a new gadget every single morning."<br>
@@ -170,17 +258,19 @@
 
       <div class="review-section">
         <h2>The "I Won Christmas" Gift</h2>
-        <p>Finding a gift for a tech enthusiast, a gamer, or someone who "has everything" is a nightmare. <strong>This is the solution.</strong></p>
+        <p>Finding a gift for a tech enthusiast, a gamer, or someone who "has everything" is a nightmare. <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>This is the solution.</strong></a></p>
         <p>It’s unique enough that they definitely don't have it, but practical enough that they'll use it every day. Plus, with the app, you can send surprise photos to their frame remotely. It’s the modern way to say "thinking of you" without sending a text.</p>
 
         <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank">
           <img src="images/times-frame-4.jpg" alt="Gift usage scenario" style="cursor:pointer;">
         </a>
+        
+        <p><strong>🎄 Christmas is coming!</strong> Don't wait until the last minute. This frame is the perfect stocking stuffer or main event under the tree. Imagine the look on their face when they unwrap this futuristic gadget.</p>
       </div>
 
       <div class="review-section">
         <h2 style="color: #b91c1c;">⚠️ Don't Sleep On This Deal</h2>
-        <p>Because this item went viral on TikTok last week, inventory is fluctuating wildy. The <strong>Times Frame</strong> normally retails for $199.99, which is fair for this level of tech.</p>
+        <p>Because this item went viral on TikTok last week, inventory is fluctuating wildy. The <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" style="text-decoration: underline; color: #2563eb;"><strong>Times Frame</strong></a> normally retails for $199.99, which is fair for this level of tech.</p>
         <p><strong>HOWEVER:</strong> We found a link that knocks <strong>$30 OFF</strong> instantly. If you see it in stock, grab it. It's the biggest upgrade you can make to your space for under $200.</p>
         
         <div style="text-align: center; margin-top: 40px;">
@@ -192,12 +282,13 @@
 
     <!-- Floating Promo Card -->
     <div class="promo-card-fixed">
-      <div class="promo-header">Viral Tech Gadget</div>
+      <div class="promo-header">Viral Tech Gadget <span class="snow-deco">❄️</span></div>
       <img class="promo-img" src="images/times-frame-1.jpg" alt="Times Frame">
       
       <div class="promo-price-box">
         <span class="old-price">$199.99</span>
         <span class="new-price">$169.99</span>
+        <span class="christmas-badge">XMAS DEAL</span>
       </div>
 
       <div style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 5px 10px; border-radius: 6px; margin: 0 auto 10px auto; width: fit-content; font-size: 0.9rem;">
@@ -217,11 +308,29 @@
         <img src="images/guaranteed.png" alt="Quality Guaranteed" title="Quality Guaranteed">
         <img src="images/no-mosquito.png" alt="Fast Shipping" title="Fast Shipping">
       </div>
+
+      <!-- New Coupon Box -->
+      <div class="coupon-box">
+        <div class="coupon-title">🎁 Holiday Bonus: Save Extra $10</div>
+        <div style="font-size: 0.85rem; color: #555; margin-bottom: 6px;">Use code at checkout:</div>
+        <div class="coupon-code">TF30</div>
+      </div>
       
       <a class="promo-link" href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank">See Transparency — by Divoom</a>
       
       <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" class="green-btn">Save $30 Now <span class="arrow">&rarr;</span></a>
     </div>
+  </div>
+
+  <!-- Mobile Sticky Footer -->
+  <div class="mobile-sticky-footer">
+    <div class="mobile-price-info">
+      <span class="mobile-price-current">$169.99</span>
+      <span class="mobile-price-original">$199.99</span>
+    </div>
+    <a href="redirect.html?product=times-frame&to=https://divoom.com/products/times-frame" target="_blank" class="mobile-buy-btn">
+      Save $30 Now
+    </a>
   </div>
 </body>
 </html>
